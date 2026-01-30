@@ -1,0 +1,17 @@
+# Colab / Python
+__pycache__/
+*.pyc
+
+# Large ML artifacts
+emb_cache/
+fit_classifier_distilbert/
+*.pt
+*.bin
+*.safetensors
+
+# Data
+*.zip
+*.tar.gz
+
+# OS
+.DS_Store
