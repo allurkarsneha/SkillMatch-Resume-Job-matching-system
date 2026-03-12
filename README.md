@@ -1,42 +1,93 @@
-# SkillMatch -- Resume-Job Matching System (NLP)
+# SkillMatch - Resume ↔ Job Description Matching System
 
-An end-to-end resume-job matching system built using modern NLP techniques.
+SkillMatch is a transformer-based system that evaluates how well a resume matches a job description and recommends relevant jobs.
 
-## Overview
-This project implements a two-stage matching pipeline:
-1. **Sentence-BERT** for semantic retrieval of relevant jobs
-2. **DistilBERT** for reranking resume-job pairs into Low / Medium / High fit
+The system combines **semantic retrieval using SBERT** and **machine-learning reranking using DistilBERT** to produce **Top-K job recommendations** from a job dataset.
 
-The system supports:
-- Resume PDF upload or text input
-- Job retrieval and ranking
-- Interactive Gradio UI
-- Data-centric improvements using weak supervision
+---
+
+## Key Features
+
+- Resume ↔ Job Description match scoring  
+- Skill extraction from resume and job description  
+- Education and experience heuristic matching  
+- Semantic similarity using **SBERT embeddings**  
+- **DistilBERT classifier** for job fit prediction  
+- **Top-K job recommendation system**  
+- Interactive **Gradio web interface**
+
+---
+
+## System Architecture
+
+The pipeline follows these steps:
+
+1. Resume text extraction (PDF or manual text)
+2. Skill, education, and experience detection
+3. Semantic retrieval using **Sentence-BERT**
+4. Job candidate retrieval and ranking
+5. **DistilBERT reranking** for job-fit prediction
+6. Top-K job recommendations
+
+---
 
 ## Tech Stack
+
 - Python
-- Hugging Face Transformers
-- Sentence-BERT
-- DistilBERT
 - PyTorch
-- scikit-learn
+- Sentence Transformers (SBERT)
+- DistilBERT
 - Gradio
-- Google Colab
+- Pandas
+- NumPy
+- Scikit-learn
 
-## Pipeline
-1. Resume & job text preprocessing
-2. Weakly supervised label generation
-3. DistilBERT fine-tuning
-4. Sentence-BERT retrieval
-5. DistilBERT reranking
-6. Gradio-based interactive UI
+---
 
-## How to Run
-Open the notebook in Google Colab and run cells top-to-bottom (Upload Resume.csv and job_title_des.csv to Colab before that)
-Model weights and embeddings are generated locally and ignored from version control.
+## Repository Structure
 
-## Future Work
-- Resume skill / education / experience parsing
-- Recruiter-side resume ranking
-- OCR support for scanned PDFs
-- Resume improvement recommendations
+```
+SkillMatch-Resume-Job-matching-system
+│
+├── SkillMatch.ipynb
+├── jobs_clean.csv
+├── job_title_des.csv
+├── jobs_with_category.csv
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/allurkarsneha/SkillMatch-Resume-Job-matching-system.git
+cd SkillMatch-Resume-Job-matching-system
+```
+
+Install the required Python dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Running the Project
+
+Open the notebook:
+
+```bash
+SkillMatch.ipynb
+```
+
+Run all the cells in the notebook.  
+The final cell launches the **Gradio interface**, where you can:
+
+- Upload a resume (PDF or paste text)
+- Upload or paste a job description
+- View resume ↔ job description match analysis
+- Explore Top-K job recommendations
