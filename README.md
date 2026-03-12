@@ -44,21 +44,6 @@ The pipeline follows these steps:
 
 ---
 
-## Repository Structure
-
-```
-SkillMatch-Resume-Job-matching-system
-│
-├── SkillMatch.ipynb
-├── jobs_clean.csv
-├── job_title_des.csv
-├── jobs_with_category.csv
-├── requirements.txt
-└── README.md
-```
-
----
-
 ## Installation
 
 Clone the repository:
@@ -81,7 +66,7 @@ pip install -r requirements.txt
 Open the notebook:
 
 ```bash
-SkillMatch.ipynb
+notebooks/SkillMatch.ipynb
 ```
 
 Run all the cells in the notebook.  
