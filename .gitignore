@@ -1,10 +1,12 @@
 # Colab / Python
 __pycache__/
 *.pyc
+.ipynb_checkpoints/
 
 # Large ML artifacts
 emb_cache/
 fit_classifier_distilbert/
+distilbert_fit_runs/
 *.pt
 *.bin
 *.safetensors
