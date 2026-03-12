@@ -91,3 +91,15 @@ The final cell launches the **Gradio interface**, where you can:
 - Upload or paste a job description
 - View resume ↔ job description match analysis
 - Explore Top-K job recommendations
+
+---
+
+## Example Interface
+
+### Resume ↔ Job Description Match Report
+
+![Match Report](screenshots/match_report.png)
+
+### Top-K Job Recommendations
+
+![Job Recommendations](screenshots/job_recommendations.png)
